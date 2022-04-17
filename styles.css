@@ -1,0 +1,205 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
+
+:root {
+  --font-family: "Karla", sans-serif;
+
+  --cyan: hsl(179, 62%, 43%);
+  --bright-yellow: hsl(71, 73%, 54%);
+
+  --light-gray: hsl(204, 43%, 93%);
+  --grayish-blue: hsl(218, 22%, 67%);
+}
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/*  Mobile First Design */
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--light-gray);
+  line-height: 1.6;
+}
+main {
+  display: grid;
+  place-items: center;
+  width: 90%;
+  box-shadow: 10px 20px 17px -8px rgba(0, 0, 0, 0.1);
+  margin: 2.5em auto;
+}
+h1 {
+  font-size: 1.5rem;
+
+  font-weight: 700;
+}
+h2 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--light-gray);
+}
+p {
+  font-size: 15px;
+  text-align: left;
+}
+button {
+  background-color: var(--bright-yellow);
+  color: white;
+  padding: 1em 0;
+  border-radius: 6px;
+  font-size: 1em;
+  width: 100%;
+  margin-top: 1.4em;
+  box-shadow: rgb(38 124 124) 0px 4px 10px -2px;
+}
+
+.container {
+  width: 89%;
+  margin: 0 auto;
+}
+
+/*   First Section */
+
+.community-section {
+  background-color: white;
+  margin-top: 1.2em;
+  padding-bottom: 2.5em;
+  border-radius: 0.4rem 0.4rem 0 0;
+}
+.community-section h1 {
+  color: var(--cyan);
+  padding: 0.8em 0;
+}
+.community-section h2 {
+  color: var(--bright-yellow);
+  padding-bottom: 0.4em;
+}
+.community-section p {
+  color: var(--grayish-blue);
+  line-height: 1.8;
+}
+
+/*  Second Section */
+.plan-section {
+  background-color: var(--cyan);
+  padding-top: 1.9em;
+  padding-bottom: 1.8em;
+  width: 100%;
+}
+.plan-section h1 {
+  color: white;
+  padding-bottom: 0.6em;
+}
+.price {
+  font-size: 2.8rem;
+  color: white;
+  font-weight: 700;
+}
+.span {
+  color: var(--light-gray);
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+.info-p {
+  color: white;
+  font-size: 1.1rem;
+}
+/*  Last Section  */
+
+.last-section {
+  background-color: #62c0c0;
+  height: 100%;
+  color: white;
+  padding: 2em 0;
+  border-radius: 0 0 0.4rem 0.4rem;
+}
+
+.last-section p {
+  max-width: 72%;
+  font-size: 1rem;
+  padding: 0.2em 0;
+  color: var(--light-gray);
+}
+
+/*   Destop Design */
+
+@media (min-width: 750px) {
+  main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 90%;
+  }
+  .community-section {
+    grid-column: span 2;
+    border-top-left-radius: 0.7rem;
+    border-top-right-radius: 0.7rem;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+  h2 {
+    font-size: 1.6rem;
+    color: var(--light-gray);
+  }
+  p {
+    font-size: 17px;
+    text-align: left;
+  }
+  .plan-section {
+    padding: 1.9em 1.2em;
+    border-radius: 0;
+    border-bottom-left-radius: 0.7rem;
+  }
+  .last-section {
+    padding: 1.6em 1.4em;
+    border-radius: 0;
+    border-bottom-right-radius: 0.7rem;
+  }
+}
+@media (min-width: 1100px) {
+  body {
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+  h1 {
+    font-size: 2.8rem;
+    padding-top: 1.6em;
+  }
+  h2 {
+    font-size: 2.4rem;
+  }
+  p {
+    font-size: 2rem;
+  }
+  .plan-section {
+    padding-left: 2em;
+    padding-right: 2em;
+    padding-bottom: 2.6em;
+  }
+  .plan-section {
+    font-size: 1.6rem;
+  }
+  .price {
+    font-size: 3.6rem;
+    padding-top: 0.2em;
+  }
+  .span {
+    font-size: 1.8rem;
+  }
+  .info-p {
+    font-size: 2rem;
+  }
+  .last-section {
+    padding-left: 2.4em;
+  }
+  .last-section h2 {
+    padding: 0.6em 0;
+  }
+  .last-section p {
+    max-width: 65%;
+    font-size: 1.6rem;
+  }
+}
